@@ -168,6 +168,18 @@ function eventSetting() {
       }
     }
   });
+  window.addEventListener('mousedown', () => {
+    runner.jump();
+    if(runner.life <= 0) {
+      restart = true;
+    }
+  });
+  window.addEventListener('touchstart', () => {
+    runner.jump();
+    if(runner.life <= 0) {
+      restart = true;
+    }
+  });
 }
 
 
