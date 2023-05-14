@@ -7,7 +7,7 @@
 
 // スマホ版なし
 if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
-  document.querySelector('body').innerHTML = '<p>スマホではお使いになれません。</p>';
+  document.querySelector('body').innerHTML = "<p style='margin: 16px auto 0;'>申し訳ございません。スマホではお使いになれません。</p>";
   return;
 }
 
