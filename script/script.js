@@ -225,6 +225,9 @@ function render() {
   // スコアを表示する
   ctx.font = 'bold 32px monospace';
   util.drawText( String(window.gameScore).padStart(5,'0') , 100, 75, '#f5f5f5');
+  // Spaceキーでジャンプを表示する
+  ctx.font = 'bold 24px monospace';
+  util.drawText('Spaceキーでジャンプ', canvas.width / 2 - 100, 75, '#f5f5f5');
 
   // runnerのlifeが0以下ならgameoverシーンへ移行
   if(runner.life <= 0) {
