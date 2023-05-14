@@ -5,6 +5,12 @@
 
 (() => {
 
+// スマホ版なし
+if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+  document.querySelector('body').innerHTML = '<p>スマホではお使いになれません。</p>';
+  return;
+}
+
 /**
  * キーの押下状態を管理するグローバルオブジェクト
  * @global
@@ -169,12 +175,6 @@ function eventSetting() {
     }
   });
   window.addEventListener('mousedown', () => {
-    runner.jump();
-    if(runner.life <= 0) {
-      restart = true;
-    }
-  });
-  window.addEventListener('touchstart', () => {
     runner.jump();
     if(runner.life <= 0) {
       restart = true;
